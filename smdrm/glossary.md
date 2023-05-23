@@ -2,23 +2,24 @@
 layout: default
 title: Glossary
 parent: SMDRM
-nav_order: 6
+nav_order: 7
 ---
 
 # Glossary
 
 ## Annotation
 
-This is a float number between 0 and 1 representing the likelihood that the textual
-information in the `text` field refers to a specific [disaster](#disaster) type.
+A number between 0.0 and 1.0 representing the likelihood that the content of the
+[`text`]({{ site.baseurl }}/smdrm/datapoint#mandatory-fields) field refers to a
+specific natural disaster type.
 
-## Datapoint
+## Disaster Types
 
-It is a JSON formatted dictionary made of a specific set of [fields]({{ site.baseurl }}/smdrm/architecture#fields).
+_Table 1_ shows a list of disaster types that may be annotated using the data processing pipeline.
 
-## Disaster
+|Name|Argument|Description|Note|
+|----|--------|-----------|----|
+|Floods|`floods`|Floods, flash floods, rains, monsoons, cyclons and related natural disasters.| |
+|Impacts|`impacts`|Natural disasters affecting urban infrastructures e.g. earthquakes, tornados, etc.| |
 
-Within the context of SMDRM, a (natural) disaster can be of the following types:
-* Floods
-* Impacts
-
+_Table 1. Disaster Types_

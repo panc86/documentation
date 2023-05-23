@@ -3,7 +3,7 @@ layout: default
 title: Setup
 grand_parent: SMDRM
 parent: Get Started
-nav_order: 1
+nav_order: 0
 ---
 
 # Prerequisites
@@ -96,7 +96,7 @@ to contain the amount of data you plan to process.
 1. Add the file systems in the NFS server /etc/exports configuration file.
 
 ```text
-</nfs/share/absolute/path>      *.example.com(rw,sync)
+</nfs/share/absolute/path>      *.example.com(rw,sync,root_squash)
 ```
 
 {: .note}
@@ -121,4 +121,4 @@ firewall-cmd --reload
 
 # What's Next?
 
-After completing the setup of the required components, you can [deploy the Docker stack in Swarm mode]({{ site.baseurl }}/smdrm/deploy).
+Let us [install the SMDRM requirements]({{ site.baseurl }}/smdrm/install).

@@ -6,7 +6,7 @@ parent: Get Started
 nav_order: 2
 ---
 
-# Prerequisite
+# Prerequisites
 
 A Docker registry is required to distribute images to all of Docker Engines participating in a swarm.
 
@@ -26,7 +26,7 @@ Building a Docker image for the first time can take several minutes to complete.
 > 1. `POWERTRACK_PASSWORD=<changeme>` enables interactions with the Twitter Powertrack API,
 > 2. `DOCKER_HUB=<url>` references your Docker registry,
 > 3. `http_proxy=<url>` and `https_proxy=<url>` enable proxy authentication for requests outside the Docker build environment,
-> 4. `VERSION=latest` of Docker base image set via the VERSION file i.e. export VERSION=$(<./VERSION)
+> 4. `VERSION=x.y.z` of Docker base image i.e. export VERSION=$(./tools/version.sh)
 
 ```shell
 docker compose build
@@ -46,6 +46,10 @@ docker compose push
 docker stack deploy --compose-file compose.yaml --compose-file compose.staging.yaml smdrm
 ```
 
+# Swagger UI
+
+Navigate to `http://<HOST_IP_ADDRESS>/api/v1/docs` to reach the API swagger UI to test the service.
+
 # What's Next?
 
-After successfully deploying the stack, you can [create a data collection]({{ site.baseurl }}/smdrm/data_collection).
+After successfully deploying the stack, you can [create your first data collection]({{ site.baseurl }}/smdrm/examples).

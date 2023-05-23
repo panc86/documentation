@@ -1,12 +1,14 @@
 ---
 layout: default
-title: Data Pipelines
+title: Pipelines
 parent: SMDRM
 has_children: true
-nav_order: 5
+nav_order: 6
 ---
 
 # Pipelines
 
-{: .warning}
-Currently, only a data pipeline to handle Twitter data is available.
+{: .important}
+Data processing pipeline requires a number of components to run.
+<br>
+For more information, go to the [install]({{ site.baseurl }}/smdrm/install) page.

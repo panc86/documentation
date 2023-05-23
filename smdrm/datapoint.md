@@ -1,14 +1,13 @@
 ---
 layout: default
-title: Data
+title: Datapoint
 nav_order: 4
 parent: SMDRM
 ---
 
 # Datapoint
-<br>
-A datapoint is a JSON dictionary containing the required fields shown in _table 1_ below.
 
+A single newline delimited JSON entry that contains the mandatory fields as shown in _table 1_.
 
 # Mandatory Fields
 
@@ -19,7 +18,6 @@ A datapoint is a JSON dictionary containing the required fields shown in _table 
 
 _Table 1. Mandatory Fields_
 
-
 # Optional Fields
 
 |Field|Type|Description|
@@ -29,22 +27,20 @@ _Table 1. Mandatory Fields_
 |`media`|array[string]|A list of media URLs (e.g. images, videos) attached to a datapoint.|
 |`url`|string|The social media platform based public URL of the datapoint.|
 
-
 # Enriched Fields
 
 |Field|Type|Description|
 |-----|----|-----------|
-|`floods`|float|Floods annotation score.|
-|`impacts`|float|Impacts annotation score.|
-|`NER`|dictionary|DeepPavlov Named Entity Recognition tags.|
+|`floods`|number|Floods annotation score.|
+|`impacts`|number|Impacts annotation score.|
+|`NER`|object|DeepPavlov Named Entity Recognition tags.|
 |`NER.<TAG>`|array[string]|Geographic locations identified by DeepPavlov NER tagger.|
-|`places`|dictionary|Geographic attribures placeholder.|
+|`places`|object|Geographic attribures placeholder.|
 |`places.place_name`|string|The name of the place. Returned only if the GPE exists in the places Geopackage file.|
-|`places.subregion_name`|string|The sub-region name.|
 |`places.region_name`|string|The region name.|
 |`places.country_name`|string|The Country name.|
-|`places.latitude`|float|Latitude in WSG84 CRS.|
-|`places.longitude`|float|Longitude in WSG84 CRS.|
+|`places.latitude`|number|Latitude in WSG84 CRS.|
+|`places.longitude`|number|Longitude in WSG84 CRS.|
 |`text_clean`|string|Normalized textual information|
 
 _Table 3. Data pipeline process generated fields_
